@@ -1,0 +1,6 @@
+Kuvat/
+GEMINI.md
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+.history/

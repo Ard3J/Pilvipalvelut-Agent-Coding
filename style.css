@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #020205;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex; /* Use flexbox for overall layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh;
+}
+#ui-layer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    pointer-events: none;
+    z-index: 10;
+}
+.stat {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #00f2ff;
+    text-shadow: 0 0 10px #00f2ff;
+}
+canvas {
+    background: radial-gradient(circle, #0a0a1a 0%, #000000 100%);
+    border: 1px solid #1a1a3a;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Space between canvas and health bar */
+}
+
+/* New styles for health bar */
+#health-bar-container {
+    display: flex;
+    gap: 5px; /* Spacing between health segments */
+    margin-top: 10px; /* Space below canvas */
+}
+
+.health-segment {
+    width: 20px;
+    height: 15px;
+    border: 2px solid #00f2ff; /* Player color border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.health-segment.filled {
+    background-color: #00f2ff; /* Player color fill */
+}
+.health-segment.empty {
+    background-color: transparent; /* Transparent fill */
+}
+
+#controls-hint {
+    margin-top: 30px;
+    text-align: center;
+    color: #00f2ff;
+    font-size: 14px;
+    opacity: 0.6;
+    line-height: 1.5;
+}
